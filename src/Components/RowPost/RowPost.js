@@ -41,22 +41,29 @@ function RowPost(props) {
 
   }
 
+  const [showVideo, setShowVideo] = useState(true);
+
+  
   return (
     <div className='row'>
         <h2>{props.title}</h2>
 
         <div className='posters'>
-          {movies.map((obj)=>
-
-            <img onClick={()=>handleMovie(obj.id)} className={ props.isSmall ? 'smallPoster':'poster'} src={`${imageurl + obj.backdrop_path}`} alt="poster" />
-          )}
-
-        </div>
-            {urlId && <Youtube opts={opts} videoId={urlId.key}/> }
-                
-              
+        {movies.map((obj) => (
+          <div key={obj.id} className='poster-container'>
+            <img
+              onClick={() => handleMovie(obj.id)}
+              className={props.isSmall ? 'smallPoster' : 'poster'}
+              src={`${imageurl + obj.backdrop_path}`}
+              alt="poster"
+            />
+            <div className="poster-title">{obj.title}</div>
+          </div>
+        ))}
+      </div>
+      {urlId && <Youtube opts={opts} videoId={urlId.key} />}
     </div>
-  )
+  );
 }
 
 export default RowPost
