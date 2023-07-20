@@ -1,0 +1,47 @@
+
+
+.navbar {
+    background-color: transparent; /* Set the background color to transparent */
+    border-bottom: 2px solid transparent; /* Set a transparent border initially */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow effect to the bottom of the navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: border-color 0.3s ease; 
+  }
+  
+  .logo {
+    width: 100px;
+  }
+  .navbar:hover {
+    border-bottom-color: #6e3235; /* Change the border color on hover */
+  }
+  
+  .logo {
+    width: 100px;
+  }
+  
+  .nav-right {
+    display: flex;
+    gap: 15px;
+    margin-right: 11px;
+  }
+  
+  .btn {
+    background-color: transparent;
+    color: #fff;
+    font-size: medium;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .btn:hover {
+    background-color: #b2070e;
+  }
